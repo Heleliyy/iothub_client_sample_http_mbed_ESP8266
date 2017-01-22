@@ -1,0 +1,14 @@
+data/iothub_client_sample_http.c.i
+data/wolfSSL.lib.i
+data/NTPClient.lib.i
+data/EthernetInterface.lib.i
+data/certs.c.i
+data/main.cpp.i
+data/certs.h.i
+data/iothub_client.lib.i
+data/azure_c_shared_utility.lib.i
+data/mbed.bld.i
+data/azureiot_common.lib.i
+data/iothub_http_transport.lib.i
+data/mbed-rtos.lib.i
+data/iothub_client_sample_http.h.i

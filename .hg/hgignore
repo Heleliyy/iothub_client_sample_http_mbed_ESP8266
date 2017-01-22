@@ -1,0 +1,33 @@
+syntax: glob
+.hg
+.git
+.svn
+.CVS
+.cvs
+*.orig
+.build
+.export
+.msub
+.meta
+.ctags*
+*.uvproj
+*.uvopt
+*.project
+*.cproject
+*.launch
+*.ewp
+*.eww
+Makefile
+Debug
+*.htm
+*.settings
+mbed_settings.py
+*.py[cod]
+# subrepo ignores
+NTPClient
+azure_c_shared_utility
+iothub_client
+iothub_http_transport
+mbed-rtos
+wolfSSL
+ESP8266Interface
