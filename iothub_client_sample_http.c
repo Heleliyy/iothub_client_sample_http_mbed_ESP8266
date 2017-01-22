@@ -29,7 +29,7 @@ and removing calls to _DoWork will yield the same results. */
 /*String containing Hostname, Device Id & Device Key in the format:                         */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessKey=<device_key>"                */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessSignature=<device_sas_token>"    */
-//static const char* connectionString = "HostName=mbed-hub.azure-devices.net;DeviceId=NucleoF411RE_heleli;SharedAccessKey=vwoUYj92WfS18nPmvb6MfNueK8Z+qriOrrBa8fZsOrc=";
+//static const char* connectionString = "[DeviceConnectionString]";
 
 static int callbackCounter;
 static bool g_continueRunning;
@@ -126,7 +126,7 @@ void iothub_client_sample_http_run(void)
     {
         (void)printf("Starting the IoTHub client sample HTTP...\r\n");
 
-		char* connectionString = "HostName=mbed-hub.azure-devices.net;DeviceId=NucleoF411RE_heleli;SharedAccessKey=vwoUYj92WfS18nPmvb6MfNueK8Z+qriOrrBa8fZsOrc=";
+		char* connectionString = "[DeviceConnectionString]";
         if ((iotHubClientHandle = IoTHubClient_LL_CreateFromConnectionString(connectionString, HTTP_Protocol)) == NULL)
         {
             (void)printf("ERROR: iotHubClientHandle is NULL!\r\n");

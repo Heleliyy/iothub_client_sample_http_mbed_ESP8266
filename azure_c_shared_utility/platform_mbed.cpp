@@ -12,7 +12,7 @@
 #include "azure_c_shared_utility/tlsio_wolfssl.h"
 #include "mbed.h"
 
-ESP8266Interface wifi(D8,D2,D0,"Ruff_R0101965","Password01!",115200); // TX,RX,Reset,SSID,Password,Baud
+ESP8266Interface wifi(D8,D2,D0,"[Wifi_SSID]","[Wifi_Password]",115200); // TX,RX,Reset,SSID,Password,Baud
 RawSerial pc(USBTX, USBRX); // tx, rx
 
 int setupRealTime(void)
