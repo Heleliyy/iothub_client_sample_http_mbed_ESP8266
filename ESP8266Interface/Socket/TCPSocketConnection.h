@@ -26,7 +26,6 @@
 TCP socket connection
 */
 class TCPSocketConnection : public Socket, public Endpoint {
-    friend class TCPSocketServer;
     
 public:
     /** TCP socket connection

@@ -352,7 +352,7 @@ void ESP8266::reset()
     reset_pin = 1;
     //wait(1);
     //reset_pin = !reset_pin
-    //send("+++",3);
+    send("+++",3);
     wait(1);
     state.cmdMode = true;
     sendCommand("AT", "OK", NULL, 1000);

@@ -186,8 +186,8 @@ int TCPSocketConnection::receive(char* buffer, int length)
     while (time < _timeout) {
 
         nb_available = wifi->readable();
-        //for (int i = 0; i < min(nb_available, length); i++) {
-        for (int i = 0; i < min(nb_available, (length-idx)); i++) {
+        nb_available = min(nb_available, (length - idx));
+        for (int i = 0; i < nb_available; i++) {
             buffer[idx] = wifi->getc();
             idx++;
         }

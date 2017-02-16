@@ -39,8 +39,18 @@ public:
 
     void queue(T k) {
         if (isFull()) {
-            read++;
-            read %= size;
+            T *newBuf = (T *)malloc(size * 2 * sizeof(T));
+            if (write > read) {
+                memcpy(newBuf, buf + read, write - read);
+            } else {
+                memcpy(newBuf, buf + read, size - read);
+                memcpy(newBuf + size - read, buf, write);
+            }
+            write = available();
+            read = 0;
+            size = size * 2;
+            free(buf);
+            buf = newBuf;
         }
         buf[write++] = k;
         write %= size;
